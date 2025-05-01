@@ -1,0 +1,49 @@
+{
+  "name": "mermaid-docs-generator",
+  "version": "1.0.0",
+  "description": "将Markdown文档转换为带有交互式Mermaid图表的HTML静态网页",
+  "main": "src/index.js",
+  "bin": {
+    "mermaid-docs": "bin/cli.js"
+  },
+  "scripts": {
+    "start": "node bin/cli.js",
+    "test": "node test/test.js",
+    "prepublishOnly": "npm test"
+  },
+  "keywords": [
+    "markdown",
+    "mermaid",
+    "documentation",
+    "static-site",
+    "diagrams",
+    "html",
+    "generator",
+    "chart",
+    "diagram",
+    "interactive"
+  ],
+  "author": "luoleyan",
+  "homepage": "https://github.com/luoleyan/mermaid-docs-generator#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luoleyan/mermaid-docs-generator.git"
+  },
+  "bugs": {
+    "url": "https://github.com/luoleyan/mermaid-docs-generator/issues"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "commander": "^9.4.1",
+    "fs-extra": "^11.1.0",
+    "glob": "^8.1.0",
+    "highlight.js": "^11.8.0",
+    "html2canvas": "^1.4.1",
+    "marked": "^5.1.0",
+    "mermaid": "^10.6.1"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}

@@ -1,0 +1,327 @@
+/* 基础样式 */
+:root {
+  --primary-color: #4CAF50;
+  --primary-dark: #388E3C;
+  --primary-light: #C8E6C9;
+  --accent-color: #FF5722;
+  --text-color: #333;
+  --text-light: #666;
+  --background-color: #fff;
+  --background-light: #f5f5f5;
+  --border-color: #ddd;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --header-height: 60px;
+  --sidebar-width: 250px;
+  --content-max-width: 1200px;
+}
+
+/* 暗色主题 */
+.theme-dark {
+  --primary-color: #66BB6A;
+  --primary-dark: #43A047;
+  --primary-light: #A5D6A7;
+  --accent-color: #FF7043;
+  --text-color: #eee;
+  --text-light: #bbb;
+  --background-color: #222;
+  --background-light: #333;
+  --border-color: #444;
+  --shadow-color: rgba(0, 0, 0, 0.3);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: var(--background-color);
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--primary-dark);
+  text-decoration: underline;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-top: 0;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-top: 2rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+ul, ol {
+  margin-bottom: 1rem;
+  padding-left: 2rem;
+}
+
+code {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+  background-color: var(--background-light);
+  padding: 0.2rem 0.4rem;
+  border-radius: 3px;
+  font-size: 0.9em;
+}
+
+pre {
+  background-color: var(--background-light);
+  padding: 1rem;
+  border-radius: 5px;
+  overflow-x: auto;
+  margin-bottom: 1rem;
+}
+
+pre code {
+  background-color: transparent;
+  padding: 0;
+  border-radius: 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+}
+
+th, td {
+  padding: 0.5rem;
+  border: 1px solid var(--border-color);
+}
+
+th {
+  background-color: var(--background-light);
+  font-weight: bold;
+  text-align: left;
+}
+
+/* 布局 */
+.header-container {
+  max-width: var(--content-max-width);
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+header {
+  background-color: var(--primary-color);
+  color: white;
+  height: var(--header-height);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  box-shadow: 0 2px 5px var(--shadow-color);
+}
+
+.logo a {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav li {
+  margin-left: 1.5rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: var(--primary-light);
+  text-decoration: none;
+}
+
+.container {
+  max-width: var(--content-max-width);
+  margin: var(--header-height) auto 0;
+  padding: 2rem 1rem;
+  display: flex;
+}
+
+.sidebar {
+  width: var(--sidebar-width);
+  padding-right: 2rem;
+  flex-shrink: 0;
+}
+
+.sidebar h3 {
+  margin-top: 0;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  margin-bottom: 0.5rem;
+}
+
+.content {
+  flex-grow: 1;
+  min-width: 0;
+}
+
+.content-body {
+  max-width: 100%;
+}
+
+footer {
+  background-color: var(--background-light);
+  padding: 1rem;
+  text-align: center;
+  color: var(--text-light);
+  margin-top: 2rem;
+}
+
+/* 卡片样式 */
+.card {
+  background-color: var(--background-color);
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 5px var(--shadow-color);
+}
+
+.card-title {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+}
+
+.card-content {
+  margin-bottom: 1rem;
+}
+
+.card-footer {
+  text-align: right;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.btn {
+  display: inline-block;
+  background-color: var(--primary-color);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 3px;
+  text-decoration: none;
+  transition: background-color 0.2s;
+}
+
+.btn:hover {
+  background-color: var(--primary-dark);
+  color: white;
+  text-decoration: none;
+}
+
+/* Mermaid图表样式 */
+.mermaid {
+  background-color: var(--background-light);
+  padding: 1rem;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  overflow-x: auto;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+  
+  .sidebar {
+    width: 100%;
+    padding-right: 0;
+    margin-bottom: 2rem;
+  }
+  
+  .header-container {
+    flex-direction: column;
+    padding: 0.5rem 1rem;
+  }
+  
+  header {
+    height: auto;
+  }
+  
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 0.5rem;
+  }
+  
+  nav li {
+    margin: 0.5rem;
+  }
+  
+  .container {
+    margin-top: 100px;
+  }
+}
+
+/* 错误消息样式 */
+.error-message {
+  background-color: #ffebee;
+  color: #c62828;
+  padding: 1rem;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+}
+
+.error-message h3 {
+  margin-top: 0;
+  color: #c62828;
+}
+
+.error-message pre {
+  background-color: #fff;
+  border: 1px solid #ffcdd2;
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{title}}</title>
+  {{cssLinks}}
+  {{jsLinks}}
+</head>
+<body class="theme-{{theme}}">
+  <header>
+    <div class="header-container">
+      <div class="logo">
+        <a href="index.html">{{projectTitle}}</a>
+      </div>
+      <nav>
+        <ul>
+          {{navLinks}}
+          <li><a href="changelog.html">更新日志</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="container">
+    <aside class="sidebar">
+      <h3>文档列表</h3>
+      <ul>
+        {{sidebarLinks}}
+      </ul>
+    </aside>
+
+    <main class="content">
+      <h1>{{categoryName}}</h1>
+      
+      <p>本节包含{{categoryName}}相关的文档。</p>
+      
+      <div class="card-container">
+        {{fileCards}}
+      </div>
+    </main>
+  </div>
+
+  <footer>
+    <p>&copy; 2023 由 Mermaid文档生成器 生成</p>
+  </footer>
+</body>
+</html>

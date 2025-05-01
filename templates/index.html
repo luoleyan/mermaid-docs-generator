@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{title}}</title>
+  {{cssLinks}}
+  {{jsLinks}}
+</head>
+<body class="theme-{{theme}}">
+  <header>
+    <div class="header-container">
+      <div class="logo">
+        <a href="index.html">{{projectTitle}}</a>
+      </div>
+      <nav>
+        <ul>
+          {{navLinks}}
+          <li><a href="changelog.html">更新日志</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="container">
+    <main class="content" style="width: 100%;">
+      <h1>{{projectTitle}}</h1>
+      
+      <p>欢迎访问项目文档。本站点包含了项目的各种图表和设计文档，用于帮助开发者理解项目结构、数据流和逻辑。</p>
+      
+      <h2>文档类别</h2>
+      
+      {{categoryCards}}
+      
+      <h2>使用说明</h2>
+      
+      <p>点击上方导航栏或卡片可以进入相应的文档分类页面，查看详细文档。</p>
+      
+      <h3>图表交互功能</h3>
+      
+      <p>本文档支持以下交互功能：</p>
+      
+      <ul>
+        <li><strong>点击图表查看大图</strong>：点击任何图表可以在弹出窗口中查看大图</li>
+        <li><strong>缩放控制</strong>：在大图模式下可以使用右下角的按钮放大、缩小和重置图表</li>
+        <li><strong>保存图片</strong>：在大图模式下可以右键点击图表，选择"保存图片"将图表保存为图片文件</li>
+      </ul>
+    </main>
+  </div>
+
+  <footer>
+    <p>&copy; 2023 由 Mermaid文档生成器 生成</p>
+  </footer>
+</body>
+</html>

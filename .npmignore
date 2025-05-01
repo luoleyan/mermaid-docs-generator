@@ -1,0 +1,36 @@
+# 开发文件
+.git
+.github
+.vscode
+.idea
+.DS_Store
+*.log
+*.swp
+*.swo
+
+# 测试文件
+test
+tests
+__tests__
+coverage
+
+# 文档示例
+examples
+docs
+
+# 构建文件
+node_modules
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+
+# 其他
+.travis.yml
+.eslintrc
+.eslintignore
+.prettierrc
+.prettierignore
+.editorconfig
+.gitattributes
+CHANGELOG.md
+CONTRIBUTING.md

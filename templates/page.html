@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{title}}</title>
+  {{cssLinks}}
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.8.0/styles/github.min.css">
+  {{jsLinks}}
+</head>
+<body class="theme-{{theme}}">
+  <header>
+    <div class="header-container">
+      <div class="logo">
+        <a href="index.html">{{projectTitle}}</a>
+      </div>
+      <nav>
+        <ul>
+          {{navLinks}}
+          <li><a href="changelog.html">更新日志</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="container">
+    <aside class="sidebar">
+      <h3>文档列表</h3>
+      <ul>
+        {{sidebarLinks}}
+      </ul>
+    </aside>
+
+    <main class="content">
+      <div class="content-body">
+        {{content}}
+      </div>
+    </main>
+  </div>
+
+  <footer>
+    <p>&copy; 2023 由 Mermaid文档生成器 生成</p>
+  </footer>
+
+  <script>
+    // 初始化Mermaid
+    mermaid.initialize({
+      startOnLoad: false,
+      theme: '{{theme}}' === 'dark' ? 'dark' : 'neutral',
+      securityLevel: 'loose',
+      flowchart: {
+        useMaxWidth: true,
+        htmlLabels: true,
+        curve: 'basis'
+      },
+      er: {
+        useMaxWidth: true
+      },
+      sequence: {
+        useMaxWidth: true
+      },
+      classDiagram: {
+        useMaxWidth: true
+      },
+      stateDiagram: {
+        useMaxWidth: true
+      }
+    });
+
+    // 处理页面加载完成后的操作
+    document.addEventListener('DOMContentLoaded', function() {
+      // 查找所有代码块并应用语法高亮
+      if (typeof hljs !== 'undefined') {
+        document.querySelectorAll('pre code').forEach((block) => {
+          hljs.highlightBlock(block);
+        });
+      } else {
+        console.warn('highlight.js未加载，代码高亮功能不可用');
+      }
+
+      // 使用mermaid.run()渲染图表
+      try {
+        mermaid.run({
+          querySelector: '.mermaid'
+        }).catch(error => {
+          console.error('Mermaid运行错误:', error);
+          document.querySelectorAll('.mermaid').forEach(el => {
+            el.innerHTML = '<div class="error-message"><h3>图表渲染错误</h3><p>' + error.message + '</p><pre>' + el.textContent + '</pre></div>';
+          });
+        });
+      } catch (error) {
+        console.error('Mermaid处理错误:', error);
+        document.querySelectorAll('.mermaid').forEach(el => {
+          el.innerHTML = '<div class="error-message"><h3>图表处理错误</h3><p>' + error.message + '</p><pre>' + el.textContent + '</pre></div>';
+        });
+      }
+    });
+  </script>
+</body>
+</html>
