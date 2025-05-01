@@ -84,7 +84,7 @@ npm version major
 
 ## 发布后检查
 
-发布后，访问 [npm 网站](https://www.npmjs.com/package/mermaid-docs-generator) 检查包是否正确发布。
+发布后，访问 [npm 网站](https://www.npmjs.com/~luoleyan) 检查包是否正确发布。
 
 ## 撤销发布
 
