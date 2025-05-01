@@ -1,6 +1,6 @@
 {
   "name": "mermaid-docs-generator",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "将Markdown文档转换为带有交互式Mermaid图表的HTML静态网页",
   "main": "src/index.js",
   "bin": {
