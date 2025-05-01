@@ -32,6 +32,7 @@
   "bugs": {
     "url": "https://github.com/luoleyan/mermaid-docs-generator/issues"
   },
+  "documentation": "https://luoleyan.github.io/mermaid-docs-generator/",
   "license": "MIT",
   "dependencies": {
     "chalk": "^4.1.2",

@@ -2,6 +2,11 @@
 
 将Markdown文档转换为带有交互式Mermaid图表的HTML静态网页。
 
+[![NPM版本](https://img.shields.io/npm/v/mermaid-docs-generator.svg)](https://www.npmjs.com/package/mermaid-docs-generator)
+[![许可证](https://img.shields.io/npm/l/mermaid-docs-generator.svg)](https://github.com/luoleyan/mermaid-docs-generator/blob/main/LICENSE)
+
+**在线文档：** [https://luoleyan.github.io/mermaid-docs-generator/](https://luoleyan.github.io/mermaid-docs-generator/)
+
 ## 功能特点
 
 1. 将Markdown文档转换为HTML静态网页
@@ -74,22 +79,22 @@ npx mermaid-docs serve
 module.exports = {
   // 输入目录，包含Markdown文档
   input: 'docs',
-  
+
   // 输出目录，生成的HTML文件
   output: 'docs-html',
-  
+
   // 文档标题
   title: '项目文档',
-  
+
   // 主题 (light, dark)
   theme: 'light',
-  
+
   // 是否启用图表交互功能
   interactive: true,
-  
+
   // 是否启用保存图片功能
   saveImage: true,
-  
+
   // 文档分类
   categories: [
     { id: 'structure', name: '结构图', path: 'structure' },
@@ -97,7 +102,7 @@ module.exports = {
     { id: 'flowcharts', name: '流程图', path: 'flowcharts' },
     { id: 'ui', name: 'UI设计图', path: 'ui' }
   ],
-  
+
   // 自定义模板（可选）
   templates: {
     // 自定义页面模板
